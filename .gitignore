@@ -1,0 +1,48 @@
+# ── Variáveis de ambiente (NUNCA commitar!) ───────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+.mypy_cache/
+.ruff_cache/
+
+# ── Node / Frontend ───────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+*.log
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE / Claude ──────────────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+.claude/
+
+# ── Arquivos legados (raiz) — protótipos substituídos pela pasta backend/ ──────
+mnt/
+ai_insight.py
+api.js
+main.py
+market.py
+profile_engine.py
+quiz.py
+simulation.py

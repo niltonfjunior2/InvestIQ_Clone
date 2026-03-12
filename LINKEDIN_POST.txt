@@ -1,0 +1,54 @@
+🚀 Novo projeto no portfólio: InvestIQ — Plataforma de Recomendação de Investimentos com IA
+
+Construí um sistema end-to-end de assessoria de investimentos que une minha experiência prática no mercado financeiro com clientes de alta renda à engenharia de software moderna.
+
+A ideia surgiu de uma realidade que vivi de perto: o processo de suitability — identificar o perfil de risco de um investidor e recomendar os ativos certos — é um trabalho sofisticado, normalmente restrito a grandes bancos e assessores. Quis democratizar isso com tecnologia.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🏗 O que foi construído:
+
+→ Backend em FastAPI com 5 routers organizados (quiz, portfólio, simulação, mercado, relatórios)
+→ Quiz de suitability com 8 perguntas baseadas em critérios reais de perfil de investidor
+→ Engine de recomendação que gera carteiras com 4 perfis: Conservador, Moderado, Arrojado e Sofisticado
+→ Simulador patrimonial com juros compostos e aportes mensais recorrentes (FV = PV·(1+rm)ⁿ + PMT·((1+rm)ⁿ−1)/rm)
+→ Integração com Alpha Vantage API para cotações reais de ativos da B3 com rate limiting assíncrono
+→ Análise personalizada gerada pelo Claude (Anthropic) com contexto financeiro especializado
+→ Geração de relatório PDF de 4 páginas diretamente no browser com jsPDF
+→ Frontend React com Vite, gráficos Recharts e design premium dark/gold
+→ Docker Compose com multi-stage Dockerfiles e Nginx para produção
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 O que mais aprendi neste projeto:
+
+O ponto que mais me desafiou foi combinar matemática financeira real com engenharia de software de forma que o resultado fosse educativo para o usuário. Não basta mostrar um número — o sistema precisa explicar o porquê e mostrar o impacto de cada decisão (como a diferença brutal de investir R$ 2.000/mês vs. não aportar nada ao longo de 10 anos).
+
+Outro aprendizado importante foi a arquitetura de integração com múltiplas APIs externas respeitando rate limits — a Alpha Vantage gratuita permite apenas 5 req/minuto, então implementei delays assíncronos com asyncio.sleep para não estourar a cota sem travar o servidor.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🛠 Stack completo:
+
+Backend: FastAPI · Pydantic v2 · httpx (async) · Anthropic SDK · Uvicorn
+Frontend: React 18 · Vite · Recharts · Lucide React · jsPDF · Axios
+Infra: Docker Compose · Nginx (SPA) · Multi-stage Dockerfile
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📌 Contexto do portfólio:
+
+Este é o terceiro projeto do meu portfólio de Pós-Graduação em Engenharia de Software com IA Aplicada. Os anteriores foram:
+
+→ AI Data Platform B3 — agente LangChain ReAct que responde perguntas sobre ações brasileiras em linguagem natural (Databricks + Delta Lake + MCP)
+→ VecRecom — sistema de recomendação de produtos com Two-Tower Neural Network e ChromaDB
+
+Cada projeto foi desenhado para demonstrar competências complementares: engenharia de dados, agentes de IA, LLM integration e agora ML + sistemas financeiros.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Estou compartilhando o código completo no GitHub (link nos comentários) com README detalhado incluindo arquitetura, endpoints documentados, exemplos de curl e guia de instalação local e via Docker.
+
+Feedbacks são muito bem-vindos — principalmente de quem trabalha com mercado financeiro ou com sistemas de recomendação.
+
+#Python #FastAPI #React #ArtificialIntelligence #LLM #MachineLearning #FinTech #MercadoFinanceiro #Investimentos #SoftwareEngineering #PortfolioProject #Claude #Anthropic #Docker #DataEngineering
