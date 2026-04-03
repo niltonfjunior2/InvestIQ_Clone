@@ -2,17 +2,16 @@
 
 <div align="center">
 
-![InvestIQ Banner](https://img.shields.io/badge/InvestIQ-Pro-C9A53A?style=for-the-badge&logo=trending-up&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![InvestIQ Banner](https://img.shields.io/badge/InvestIQ-Live_on_Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Claude](https://img.shields.io/badge/Claude-Sonnet-C9A53A?style=for-the-badge&logo=anthropic&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Gemini](https://img.shields.io/badge/Google_Gemini-1.5_Flash-4285F4?style=for-the-badge&logo=google-gemini&logoColor=white)
 
-**Sistema end-to-end de recomendação de investimentos para o mercado financeiro brasileiro.**
-Perfil por suitability · Carteira personalizada · Simulação com aportes mensais · Dados reais via Alpha Vantage · Relatório PDF · IA Generativa
+**O InvestIQ agora é Cloud Native!**
+Migration from offline prototypes to a fully functional Full-Stack deployment on Vercel.
 
-[Demo](#-demo) · [Arquitetura](#-arquitetura) · [Instalação](#-instalação) · [API Docs](#-api) · [Aprendizados](#-o-que-este-projeto-ensina)
+[📘 Relatório Técnico de Migração](TECHNICAL_REPORT.md) · [Demo](#-demo) · [Arquitetura](#-arquitetura) · [Instalação](#-instalação)
 
 </div>
 
