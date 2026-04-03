@@ -9,7 +9,7 @@
 ![Claude](https://img.shields.io/badge/Claude-Sonnet-C9A53A?style=for-the-badge&logo=anthropic&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-**Sistema end-to-end de recomendação de investimentos para o mercado financeiro brasileiro.**  
+**Sistema end-to-end de recomendação de investimentos para o mercado financeiro brasileiro.**
 Perfil por suitability · Carteira personalizada · Simulação com aportes mensais · Dados reais via Alpha Vantage · Relatório PDF · IA Generativa
 
 [Demo](#-demo) · [Arquitetura](#-arquitetura) · [Instalação](#-instalação) · [API Docs](#-api) · [Aprendizados](#-o-que-este-projeto-ensina)
@@ -79,6 +79,7 @@ Investidores individuais frequentemente escolhem produtos inadequados ao seu per
 ### Stack tecnológico
 
 **Backend:**
+
 - **FastAPI** — API REST assíncrona com documentação automática OpenAPI
 - **Pydantic v2** — Validação de dados e serialização tipada
 - **httpx** — Cliente HTTP assíncrono para integração Alpha Vantage
@@ -86,6 +87,7 @@ Investidores individuais frequentemente escolhem produtos inadequados ao seu per
 - **Uvicorn** — ASGI server de alta performance
 
 **Frontend:**
+
 - **React 18** — UI declarativa com hooks
 - **Vite** — Build tool moderno com HMR
 - **Recharts** — Gráficos de linha, área, pizza e barras
@@ -94,6 +96,7 @@ Investidores individuais frequentemente escolhem produtos inadequados ao seu per
 - **jsPDF** — Geração de relatório PDF no browser
 
 **Infraestrutura:**
+
 - **Docker Compose** — Orquestração local com multi-container
 - **Nginx** — Serve o frontend em produção (SPA fallback configurado)
 - **Multi-stage Dockerfile** — Imagens enxutas e seguras
@@ -194,6 +197,7 @@ A documentação interativa completa está disponível em `http://localhost:8000
 ### Endpoints principais
 
 #### Quiz de Suitability
+
 ```
 GET  /api/quiz/questions       → Retorna 8 perguntas com opções e pontuações
 POST /api/quiz/evaluate        → Calcula perfil a partir das respostas
@@ -201,6 +205,7 @@ GET  /api/quiz/profiles        → Lista todos os perfis disponíveis
 ```
 
 #### Portfólio
+
 ```
 GET /api/portfolio/{profile}              → Carteira completa com todos os ativos
 GET /api/portfolio/{profile}/allocation-summary → Alocação por classe de ativo
@@ -208,6 +213,7 @@ GET /api/portfolio/{profile}/risk-metrics       → Métricas de risco
 ```
 
 #### Simulação
+
 ```
 POST /api/simulation/run                  → Projeção patrimonial (FV com aportes mensais)
 GET  /api/simulation/scenarios/{profile}  → Compara 6 cenários de aporte para o mesmo perfil
@@ -215,12 +221,14 @@ GET  /api/simulation/benchmarks           → Retorna os benchmarks com taxas
 ```
 
 #### Mercado Real
+
 ```
 POST /api/market/quotes    → Cotações reais via Alpha Vantage para os ativos do perfil
 POST /api/market/overview  → Visão geral: Ibovespa, S&P 500 BRL, IFIX
 ```
 
 #### Relatórios e IA
+
 ```
 POST /api/report/insight          → Análise personalizada via Claude Sonnet
 GET  /api/report/summary/{profile} → Dados completos para geração de PDF
@@ -252,41 +260,49 @@ curl -X POST http://localhost:8000/api/report/insight \
 Este projeto foi desenvolvido como parte de um portfólio de Engenharia de Software com IA Aplicada, cobrindo múltiplas competências simultaneamente:
 
 ### 1. Arquitetura de sistemas
+
 - Separação clara de responsabilidades: UI → API → Serviços → APIs externas
 - Princípios REST com documentação OpenAPI automática
 - Padrão de serviços com injeção de dependência (FastAPI DI)
 
 ### 2. Desenvolvimento backend com Python
+
 - FastAPI com routers, schemas Pydantic e validação de tipos
 - Programação assíncrona com `async/await` e httpx
 - Tratamento de erros com HTTPException e mensagens significativas
 
 ### 3. Integração com LLMs
+
 - Uso da Anthropic SDK para chamadas ao Claude
 - Engenharia de prompt com contexto financeiro especializado
 - Padrão system prompt + user prompt para outputs consistentes
 
 ### 4. Matemática financeira aplicada
+
 - Fórmula de Valor Futuro (FV) com aportes mensais recorrentes
 - Conversão de taxa anual para taxa mensal equivalente
 - Comparação de benchmarks e cálculo de alpha
 
 ### 5. Frontend moderno com React
+
 - Composição de componentes complexos com estado local
 - Custom hooks para separar lógica de UI (useMarketData)
 - Geração de PDF no browser com jsPDF sem dependência de servidor
 
 ### 6. Consumo de APIs externas
+
 - Integração com Alpha Vantage respeitando rate limits
 - Tratamento de erros de API (Note, Information, timeout)
 - Delay assíncrono entre requisições com asyncio.sleep
 
 ### 7. Infraestrutura e DevOps
+
 - Dockerfiles multi-stage para imagens otimizadas
 - Docker Compose com healthcheck e depends_on
 - Nginx como servidor de produção com configuração SPA
 
 ### 8. Design de produto e UX
+
 - Sistema de design coeso com CSS variables
 - Animações com CSS keyframes
 - Acessibilidade e responsividade
@@ -343,12 +359,14 @@ investiq/
 ## 🌐 APIs Externas Utilizadas
 
 ### Anthropic (Claude)
+
 - **Modelo**: `claude-sonnet-4-20250514`
 - **Uso**: Geração de análise personalizada de carteiras
 - **Docs**: [docs.anthropic.com](https://docs.anthropic.com)
 - **Custo**: Pay-per-use (tokens)
 
 ### Alpha Vantage
+
 - **Uso**: Cotações reais de ações, FIIs e ETFs da B3 e NYSE
 - **Plano gratuito**: 25 req/dia (suficiente para demonstração)
 - **Docs**: [alphavantage.co/documentation](https://www.alphavantage.co/documentation/)
@@ -384,5 +402,6 @@ MIT License — veja o arquivo [LICENSE](LICENSE) para detalhes.
 *FastAPI · React · Anthropic · Alpha Vantage · Docker*
 
 </div>
-#   I n v e s t I Q  
+#   I n v e s t I Q 
+ 
  

@@ -13,12 +13,12 @@ router = APIRouter()
 def get_insight(body: InsightRequest):
     """
     Gera análise personalizada da carteira usando Claude (Anthropic).
-    Requer ANTHROPIC_API_KEY configurada no ambiente.
+    Requer GEMINI_API_KEY configurada no ambiente.
     """
-    if not os.getenv("ANTHROPIC_API_KEY"):
+    if not os.getenv("GEMINI_API_KEY"):
         raise HTTPException(
             status_code=400,
-            detail="ANTHROPIC_API_KEY não configurada. Adicione ao arquivo .env.",
+            detail="GEMINI_API_KEY não configurada. Adicione ao arquivo .env.",
         )
     text = generate_insight(
         profile_key     = body.profile.value,
