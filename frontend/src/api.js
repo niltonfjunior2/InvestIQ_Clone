@@ -6,7 +6,7 @@ const API = axios.create({
 
 export const quizApi = {
   getQuestions: () => API.get('/quiz/questions').then(res => res.data),
-  evaluate: (answers) => API.post('/quiz/evaluate', answers).then(res => res.data),
+  evaluate: (answers) => API.post('/quiz/evaluate', { answers }).then(res => res.data),
 }
 
 export const portfolioApi = {
