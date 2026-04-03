@@ -39,10 +39,10 @@ desktop.ini
 
 # ── Arquivos legados (raiz) — protótipos substituídos pela pasta backend/ ──────
 mnt/
-ai_insight.py
-api.js
-main.py
-market.py
-profile_engine.py
-quiz.py
-simulation.py
+/ai_insight.py
+/api.js
+/main.py
+/market.py
+/profile_engine.py
+/quiz.py
+/simulation.py
